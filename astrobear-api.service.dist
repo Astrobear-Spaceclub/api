@@ -1,14 +1,13 @@
 [Unit]
-Description="Merkletree API"
+Description="Astrobear API"
 
 [Service]
-ExecStart=/root/.nvm/versions/node/v17.8.0/bin/node /application/path/executable.js
+ExecStart=/root/.nvm/versions/node/v17.8.0/bin/node /var/www/html/api.astrobearspace.club/src/index.js
 Restart=always
 User=root
 Group=nogroup
 Environment=PATH=/usr/bin:/usr/bin/env:/usr/local/bin
-Environment=NODE_ENV=production
-WorkingDirectory=/application/path
+WorkingDirectory=/var/www/html/api.astrobearspace.club
 
 [Install]
 WantedBy=multi-user.target

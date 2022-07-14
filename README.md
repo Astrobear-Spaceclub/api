@@ -1,2 +1,5 @@
-# nft-metadata-api
-Metadata API for NFTs (ERC721/ERC1155)
+# API for Astrobear Spaceclub
+# Install
+Copy .env.example to .env and fill in fields
+# Start
+Either run node src/index.js, use systemd with astrobear-api.service.dist, or npm start
