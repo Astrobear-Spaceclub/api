@@ -13,7 +13,7 @@ import compression from "compression";
 env.config();
 
 const EthersProvider = new ethers.providers.JsonRpcProvider(process.env.ETHERS_PROVIDER, process.env.NETWORK);
-const ReadingContract = new ethers.Contract(process.env.CONTRACT_ADDRESS, JSON.parse(filesystem.readFileSync('abi_'+process.env.network+'.json').toString()), EthersProvider);
+const ReadingContract = new ethers.Contract(process.env.CONTRACT_ADDRESS, JSON.parse(filesystem.readFileSync('abi_'+process.env.NETWORK+'.json').toString()), EthersProvider);
 
 const privateKey = filesystem.readFileSync(process.env.SSL_PRIVATE_KEY);
 const certificate = filesystem.readFileSync(process.env.SSL_CERT);
