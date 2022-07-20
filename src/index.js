@@ -96,7 +96,7 @@ app.get('/download-nft/:tokenId/:signature', cache('24 hours', onlyStatus200), a
         return;
     }
 
-    const file = `${process.cwd()}/metadata/${tokenId}.jpg`;
+    const file = `${process.cwd()}/metadata/${tokenId}_high_res.jpg`;
 
     res.download(file);
 });
